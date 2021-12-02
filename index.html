@@ -11,7 +11,81 @@
 </head>
 <body>
   <header class="header">
-    hello
+    <div class="wrapper">
+      <div class="header__item main-header">
+        <nav class="main-header__container">
+          <button class="main-header__item main-header__btn">
+            <span class="main-header__btn__item"></span>
+          </button>
+          <div class="main-header__item main-header__logo-container">
+            <img src="./img/header/header-logo.svg" alt="Main Header: Logo" class="main-header__logo-container__item main-header__logo-pic">
+            <div class="main-header__logo-container__item main-header__logo-text">
+              <img src="./img/header/header-logo-text.svg" alt="Main Header: Logo Text" class="main-header__logo-text__item">
+              <span class="main-header__logo-text__item">Энергосберегающие технологии</span>
+            </div>
+          </div>
+          <form action="#" name="search-form" class="main-header__item main-header__search">
+            <input type="search" name="search-input" id="search-form-input" placeholder="Поиск товаров..">
+            <button class="main-header__search-icon">
+              <img src="./img/header/search.svg" alt="Main Header: Search Icon">
+            </button>
+          </form>
+          <div class="main-header__item main-header__nav-links">
+            <a href="#">
+              <img src="./img/header/delivery.svg" alt="Main Header: Delivery Icon" class="main-header__nav-links__item">
+            </a>
+            <a href="tel:+74955063650" class="main-header__nav-links_mobile_hidden">
+              <img src="./img/header/phone.svg" alt="Subheader: Phone Icon" class="sub-header__pic">
+            </a>
+            <a href="#">
+              <img src="./img/header/account.svg" alt="Main Header: Account Icon" class="main-header__nav-links__item">
+            </a>
+            <a href="#">
+              <img src="./img/header/cart.svg" alt="Main Header: Shopping Cart Icon" class="main-header__nav-links__item">
+            </a>
+          </div>
+        </nav>
+      </div>
+      <!-- /.header__item main-header -->
+      <div class="header__item sub-header">
+        <ul class="sub-header__container">
+          <li>
+            <a href="#" class="sub-header__item">
+              <img src="./img/header/location.svg" alt="Subheader: Location Icon" class="sub-header__pic">
+              <span class="sub-header__text">Екатеринбург</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+74955063650" class="sub-header__item">
+              <img src="./img/header/phone.svg" alt="Subheader: Phone Icon" class="sub-header__pic">
+              <span class="sub-header__text">+7 (495) 506-36-50</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:office@uconerfo.ru" class="sub-header__item">
+              <img src="./img/header/mail.svg" alt="Subheader: Mail Icon" class="sub-header__pic">
+              <span class="sub-header__text">office@uconerfo.ru</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sub-header__item">
+              <img src="./img/header/request.svg" alt="Subheader: Request Icon" class="sub-header__pic">
+              <span class="sub-header__text">Заявка на расчет</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sub-header__item">
+              <img src="./img/header/contacts.svg" alt="Subheader: Contacts Icon" class="sub-header__pic">
+              <span class="sub-header__text">Контакты</span>
+            </a>
+          </li>
+        </ul>
+        <!-- <div class="modal-header-request">
+          <form action="#" name="header-request"></form>
+        </div> -->
+      </div>
+      <!-- /.header__item sub-header -->
+    </div>
   </header>
   <!-- /.header -->
 </body>
