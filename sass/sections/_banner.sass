@@ -1,0 +1,57 @@
+.banner
+  padding: 82px 0
+  background: linear-gradient(91.79deg, $main-lighter-color 16.94%, $main-light-color 83.14%)
+  color: $white-text
+  position: relative
+  overflow: hidden
+  &__item
+    &:first-child
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-right: 5px
+  &__text
+    max-width: 30vw
+    font-size: 18px
+    line-height: 27px
+    margin: 0 0 0 5px
+    &__container
+      display: flex
+      flex-direction: column
+  &__title
+    font-family: $font-semibold
+    font-size: 42px
+    line-height: 53px
+    margin: 0 4px 22px
+  &__button
+    font-family: $font-medium
+    font-size: 18px
+    line-height: 23px
+    letter-spacing: 0.02em
+    color: $header-link-text
+    background-color: $white-text
+    margin-top: 5px
+    padding: 1rem 3rem
+    width: 17.62rem
+    min-height: 4.85rem
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    &::before
+      position: absolute
+      content: ''
+      top: 1.95rem
+      left: 3rem
+      width: 2.85rem
+      height: 0.9rem
+      background-image: url(../img/sections/banner/details.png)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 100% 100%
+  &__image
+    position: absolute
+    top: 3.3vh
+    filter: drop-shadow(-50px 50px 100px rgba(56,179,197,0.3))
+    left: 49.5vw
+    width: 15.5rem

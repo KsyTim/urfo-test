@@ -1,0 +1,29 @@
+.breadcrumbs
+  padding: 46px 0
+  background-color: $breadcrump-bg
+  &__title
+    display: none
+  &__container
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    min-width: 15.5vw
+    max-width: 100vw
+    &__item
+      position: relative
+      font-size: 15px
+      line-height: 19px
+      color: $breadcrump-light-text
+      &:not(:last-child)
+        margin-right: 24px
+        &::after
+          position: absolute
+          content: '/'
+          width: 10px
+          height: 100%
+          top: 0
+          right: -18px
+          font-family: $font-regular
+      &:last-child
+        color: $header-link-text
