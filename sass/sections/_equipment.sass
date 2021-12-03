@@ -1,3 +1,140 @@
 .equipment
   padding: 17px 0 30px
   background-color: $breadcrump-bg
+  &__title
+    font-size: 40px
+    line-height: 53px
+    color: $header-link-text
+    margin: 1px 0 58px 3px
+  &__container
+    display: flex
+    justify-content: space-between
+  &__filter
+    flex: 0 0 18.5vw
+    background-color: #F4F4F4
+    padding: 9px 30px
+    margin-left: 4px
+    border-radius: 3px
+    .checkbox
+      &-label
+        position: relative
+        span
+          position: relative
+          display: inline-flex
+          align-items: center
+          user-select: none
+          &::before
+            content: ''
+            display: inline-block
+            width: 16px
+            height: 16px
+            border: none
+            margin-right: 20px
+            background-color: #fff
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 50% 50%
+        input[type="checkbox"]
+          position: absolute
+          z-index: -1
+          opacity: 0
+          &:focus
+            &:not(&:checked)+span::before
+              border-color: #423b3b
+          &:checked+span::before
+            background-image: url("../img/sections/equipment/checkbox.svg")
+            background-size: 9px 6px
+  &__goods
+    display: flex
+    flex-direction: column
+    flex: 0 0 59.2vw
+  &__info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #F4F4F4
+    border-radius: 3px
+    padding: 32px 42px
+    margin-bottom: 35px
+    &__total
+      span
+        &:last-child
+          font-size: 16px
+          line-height: 20px
+          letter-spacing: 0.02em
+          color: $sub-light-text
+    &__sort
+      label
+        margin: 0 5px 0 0
+  &__items
+    display: grid
+    grid-gap: 35px
+    grid-template: repeat(3, min-content)/repeat(3, 1fr)
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: $white-text
+    &__cost
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background-color: #dedede
+      align-self: stretch
+
+#equipment
+  &-sort
+    appearance: none
+    height: 25px
+    font-size: 17px
+    line-height: 22px
+    letter-spacing: px
+    font-family: "Euclid Circular A Regular",sans-serif
+    color: #2B2E34
+    border: none
+    outline: none
+    padding: 0
+    position: relative
+    background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 96% 60%
+    padding: 3px 33px 0 0
+  &-total
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: $header-link-text
+    font-family: $font-semibold
+
+.filter
+  &__form
+    &-header
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-title
+      font-size: 22px
+      line-height: 28px
+      color: #2B2E34
+    &-reset
+      display: flex
+      align-items: center
+      width: 6.7rem
+      justify-content: space-between
+      span
+        font-size: 16px
+        line-height: 20px
+        color: #7E838C
+      img
+        width: 17px
+        height: 17px
+        margin-top: 3px
+    &-part
+      &__title
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          top: 38%
+          right: -24px
+          width: 15px
+          height: 10px
+          background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 96% 60%

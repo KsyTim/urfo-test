@@ -25,7 +25,7 @@
             </div>
           </a>
           <form action="#" name="search-form" class="main-header__item main-header__search">
-            <input type="search" name="search-input" id="search-form-input" placeholder="Поиск товаров..">
+            <input type="search" name="search-input" id="search-form-input" placeholder="Поиск товаров.." autocomplete="off">
             <button class="main-header__search-icon">
               <img src="./img/header/search.svg" alt="Main Header: Search Icon">
             </button>
@@ -119,7 +119,255 @@
   <!-- /.breadcrumbs -->
   <section class="equipment">
     <div class="wrapper">
-      <h2 class="equipment__title">Отопительное оборудование</h2>
+      <h2 class="equipment__item equipment__title">Отопительное оборудование</h2>
+      <div class="equipment__item equipment__container">
+        <div class="equipment__container__item equipment__filter">
+          <form action="">
+            <div class="filter__form-header">
+              <h3 class="filter__form-title">Фильтры</h3>
+              <a href="#" class="filter__form-reset">
+                <span>Сбросить</span>
+                <img src="./img/sections/equipment/reset.svg" alt="Filter Form: Reset">
+              </a>
+            </div>
+            <div class="filter__form-part">
+              <a href="#type" class="filter__form-title filter__form-part__title">Отопительное оборудование</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="warm" class="checkbox-label">
+                  <input id="warm" type="checkbox">
+                  <span>Радиаторы отопления</span>
+                </label>
+                <label for="convector" class="checkbox-label">
+                  <input id="convector" type="checkbox">
+                  <span>Конвекторы отопления</span>
+                </label>
+                <label for="dry" class="checkbox-label">
+                  <input id="dry" type="checkbox">
+                  <span>Полотенцесушители</span>
+                </label>
+                <label for="radiator" class="checkbox-label">
+                  <input id="radiator" type="checkbox">
+                  <span>Арматура для радиаторов</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="equipment__container__item equipment__goods">
+          <div class="equipment__goods__item equipment__info">
+            <div class="equipment__info__total">
+              <span id="equipment-total">2394</span>
+              <span>товаров</span>
+            </div>
+            <div class="equipment__info__sort">
+              <label for="equipment-sort">Цена:</label>
+              <select name="sort" id="equipment-sort">
+                <option value="возрастание">По возрастанию</option>
+                <option value="убывание">По убыванию</option>
+                <option value="скидка">По скидке</option>
+              </select>
+            </div>
+          </div>
+          <div class="equipment__goods__item equipment__items">
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_01.png" alt="Equipment: Item 01" class="equipment__items__pic" >
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_02.png" alt="Equipment: Item 02" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_03.png" alt="Equipment: Item 03" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_01.png" alt="Equipment: Item 01" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_02.png" alt="Equipment: Item 02" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_03.png" alt="Equipment: Item 03" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_01.png" alt="Equipment: Item 01" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_02.png" alt="Equipment: Item 02" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_03.png" alt="Equipment: Item 03" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_01.png" alt="Equipment: Item 01" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_02.png" alt="Equipment: Item 02" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_03.png" alt="Equipment: Item 03" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_01.png" alt="Equipment: Item 01" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_02.png" alt="Equipment: Item 02" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+            <div class="equipment__items__item">
+              <img src="./img/sections/equipment/item_03.png" alt="Equipment: Item 03" class="equipment__items__pic">
+              <p class="equipment__items__title">Биметаллический радиатор Royal Thermo Indigo Super
+              </p>
+              <div class="equipment__items__cost">
+                <div class="equipment__items__price">
+                  <span>4250<sup>₽</sup></span>
+                </div>
+                <a class="equipment__items__cart">
+                  <img src="./img/sections/equipment/cart.png" alt="" class="equipment__items__cart-pic">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.equipment__item equipment__container -->
     </div>
     <!-- /.wrapper -->
   </section>
