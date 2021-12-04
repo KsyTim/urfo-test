@@ -47,7 +47,7 @@
   &__goods
     display: flex
     flex-direction: column
-    flex: 0 0 59.2vw
+    flex: 0 0 59.25vw
   &__info
     display: flex
     align-items: center
@@ -70,17 +70,50 @@
     display: grid
     grid-gap: 35px
     grid-template: repeat(3, min-content)/repeat(3, 1fr)
+    &__pic
+      width: 241px
     &__item
       display: flex
       flex-direction: column
       align-items: center
       background-color: $white-text
+      &-02
+        width: 289px
+    &__cart
+      img
+        width: 25px
+        height: 25px
+    &__title
+      font-size: 16px
+      line-height: 25px
+      color: $header-link-text
+      margin: 38px 0 18px
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 0 27px 0 29px
     &__cost
       display: flex
       align-items: center
       justify-content: space-between
-      background-color: #dedede
       align-self: stretch
+    &__price
+      font-family: $font-semibold
+      font-weight: 600
+      font-size: 20px
+      line-height: 25px
+      color: $header-link-text
+      padding: 0 0 0 33px
+      sup
+        margin-left: 5px
+    &__cart
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 5rem
+      height: 5rem
+      background-color: $cart-bgc
 
 #equipment
   &-sort
@@ -95,8 +128,8 @@
     outline: none
     padding: 0
     position: relative
-    background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 96% 60%
-    padding: 3px 33px 0 0
+    background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 99% 60%
+    padding: 3px 32px 0 0
   &-total
     font-size: 18px
     line-height: 22px
