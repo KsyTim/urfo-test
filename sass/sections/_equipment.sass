@@ -1,5 +1,5 @@
 .equipment
-  padding: 17px 0 30px
+  padding: 17px 0 0
   background-color: $breadcrump-bg
   &__title
     font-size: 40px
@@ -11,18 +11,23 @@
     justify-content: space-between
   &__filter
     flex: 0 0 18.5vw
+    align-self: flex-start
     background-color: #F4F4F4
     padding: 9px 30px
     margin-left: 4px
-    border-radius: 3px
+    border-radius: 2px
     .checkbox
       &-label
         position: relative
+        margin-bottom: 14px
         span
           position: relative
           display: inline-flex
           align-items: center
           user-select: none
+          font-size: 15px
+          line-height: 19px
+          color: $header-link-text
           &::before
             content: ''
             display: inline-block
@@ -41,13 +46,96 @@
           &:focus
             &:not(&:checked)+span::before
               border-color: #423b3b
-          &:checked+span::before
-            background-image: url("../img/sections/equipment/checkbox.svg")
-            background-size: 9px 6px
+          &:checked+span
+            font-weight: 600
+            &::before
+              background-image: url("../img/sections/equipment/checkbox.svg")
+              background-size: 9px 6px
+        &_color
+          position: relative
+          margin-bottom: 1.085rem
+          span
+            position: relative
+            display: inline-flex
+            align-items: center
+            user-select: none
+            font-size: 15px
+            line-height: 19px
+            color: $header-link-text
+            &::before
+              content: ''
+              display: inline-block
+              width: 10px
+              height: 10px
+              border: none
+              border-radius: 50%
+              margin-right: 23px
+            &::after
+              content: ''
+              display: inline-block
+              width: 9px
+              height: 9px
+              border: none
+              margin-left: 14px
+            &.color
+              &-red
+                &::before
+                  background-color: #FF6060
+              &-yellow
+                &::before
+                  background-color: #FFDC60
+              &-green
+                &::before
+                  background-color: #72E191
+              &-blue
+                &::before
+                  background-color: #6070FF
+              &-violet
+                &::before
+                  background-color: #A660FF
+              &-pink
+                &::before
+                  background-color: #FF60AC
+              &-beige
+                &::before
+                  background-color: #EEC3AB
+              &-white
+                &::before
+                  background-color: $white-text
+              &-black
+                &::before
+                  background-color: #000
+              &-grey
+                &::before
+                  background-color: #9D9D9D
+          input[type="checkbox"]
+            position: absolute
+            z-index: -1
+            opacity: 0
+            &:checked+span
+              font-weight: 600
+              &::before
+                border: 2px solid $white-text
+                margin: 2px 21px 0 -2px
+              &::after
+                background-image: url("../img/sections/equipment/delete-color-filter.svg")
+                background-size: 9px 9px
+    &_hugescreen
+      &_visible
+        display: block
+        position: fixed
+        top: 50%
+        right: 50%
+        bottom: 0
+        left: 0
+        z-index: 3
+        overflow-y: scroll
+        transform: translate(50%, -50%)
   &__goods
     display: flex
     flex-direction: column
-    flex: 0 0 59.25vw
+    flex: 0 0 58.9vw
+    margin-right: 4px
   &__info
     display: flex
     align-items: center
@@ -56,6 +144,7 @@
     border-radius: 3px
     padding: 32px 42px
     margin-bottom: 35px
+    border-radius: 2px
     &__total
       span
         &:last-child
@@ -63,22 +152,31 @@
           line-height: 20px
           letter-spacing: 0.02em
           color: $sub-light-text
+      &_mobile
+        &_hidden
+          display: none
     &__sort
       label
-        margin: 0 5px 0 0
+        margin: 0 3px 0 0
+    &_mobile
+      &_hidden
+        display: none
   &__items
     display: grid
     grid-gap: 35px
     grid-template: repeat(3, min-content)/repeat(3, 1fr)
     &__pic
-      width: 241px
+      width: 12.55vw
     &__item
+      position: relative
       display: flex
       flex-direction: column
       align-items: center
       background-color: $white-text
+      filter: drop-shadow(20px 20px 70px rgba(232, 238, 243, 0.2))
+      border-radius: 2px
       &-02
-        width: 289px
+        width: 15.1vw
     &__cart
       img
         width: 25px
@@ -87,7 +185,7 @@
       font-size: 16px
       line-height: 25px
       color: $header-link-text
-      margin: 38px 0 18px
+      margin: 38px 0 20px
     &__content
       display: flex
       flex-direction: column
@@ -105,8 +203,28 @@
       line-height: 25px
       color: $header-link-text
       padding: 0 0 0 33px
+      margin-top: -5px
+      display: flex
+      align-items: center
       sup
         margin-left: 5px
+      &_old
+        position: relative
+        font-size: 15px
+        line-height: 14px
+        color: $sub-light-text
+        margin: 4px 0 0 20px
+        &::before
+          position: absolute
+          content: ''
+          top: 6px
+          right: -6px
+          width: 4rem
+          height: 0.1rem
+          background-color: #F31B4F
+          transform: rotate(-10deg)
+          z-index: 1
+          border-radius: 1px
     &__cart
       display: flex
       align-items: center
@@ -114,6 +232,34 @@
       width: 5rem
       height: 5rem
       background-color: $cart-bgc
+    &__sale
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 110px
+      max-width: 40%
+      min-height: 36px
+      background-color: #F31B4F
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 2px 0 0 0
+      padding: 9px 16px
+      &-text
+        position: relative
+        font-size: 15px
+        line-height: 19px
+        color: rgba(255, 255, 255, 0.9)
+        margin: -2.5px -22px 0 0
+        &::before
+          position: absolute
+          content: ''
+          top: 3px
+          left: -28px
+          width: 15px
+          height: 15px
+          background: transparent url(../img/sections/equipment/sale.svg) no-repeat 100% 100%
 
 #equipment
   &-sort
@@ -121,15 +267,15 @@
     height: 25px
     font-size: 17px
     line-height: 22px
-    letter-spacing: px
     font-family: "Euclid Circular A Regular",sans-serif
-    color: #2B2E34
+    color: $header-link-text
     border: none
     outline: none
     padding: 0
     position: relative
     background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 99% 60%
     padding: 3px 32px 0 0
+    margin-right: -2px
   &-total
     font-size: 18px
     line-height: 22px
@@ -143,10 +289,11 @@
       display: flex
       align-items: center
       justify-content: space-between
+      margin-bottom: 38px
     &-title
       font-size: 22px
       line-height: 28px
-      color: #2B2E34
+      color: $header-link-text
     &-reset
       display: flex
       align-items: center
@@ -161,13 +308,141 @@
         height: 17px
         margin-top: 3px
     &-part
+      margin-bottom: 48px
+      &.price
+        margin-bottom: 6.8rem
+        padding-top: 3px
+      &.brand
+        margin-bottom: 43px
+        .checkbox
+          &-label
+            margin-bottom: 15px
+      &.distance,
+      &.square
+        margin-bottom: 45px
+      &:last-child
+        margin-bottom: 20px
       &__title
+        display: block
         position: relative
-        &::before
+        font-size: 18px
+        line-height: 23px
+        color: $header-link-text
+        margin-bottom: 26px
+        &:not([href='#price'])::before
           position: absolute
           content: ''
-          top: 38%
-          right: -24px
+          top: 35%
+          right: 0
           width: 15px
           height: 10px
           background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 96% 60%
+      &__content
+        display: flex
+        flex-direction: column
+    &__buttons
+      &_mobile
+        &_hidden
+          display: none
+.middle
+  position: relative
+  top: 13px
+
+.slider
+  position: relative
+  z-index: 1
+  height: 10px
+  .track
+    position: absolute
+    z-index: 1
+    height: 2px
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    border-radius: 5px
+    background-color: #DEE1E8
+  .range
+    position: absolute
+    z-index: 2
+    height: 2.5px
+    left: 25%
+    right: 25%
+    top: 0
+    bottom: 0
+    border-radius: 5px
+    background-color: #38D3E8
+  .thumb
+    position: absolute
+    z-index: 3
+    height: 17px
+    width: 2px
+    background-color: #38D3E8
+    border-radius: 5px
+    &.left
+      left: 25%
+      transform: translate(0px, -7px)
+    &.right
+      right: 25%
+      transform: translate(0px, -7px)
+    span
+      position: absolute
+      display: block
+      width: 4rem
+      font-size: 14px
+      line-height: 18px
+      color: $header-link-text
+      bottom: -34px
+      sup
+        top: -2px
+        right: -1px
+
+input[type=range]
+  position: absolute
+  pointer-events: none
+  -webkit-appearance: none
+  z-index: 2
+  height: 10px
+  width: 100%
+  opacity: 0
+
+input[type=range]::-webkit-slider-thumb
+  pointer-events: all
+  width: 30px
+  height: 30px
+  border-radius: 0
+  border: 0 none
+  background-color: red
+  -webkit-appearance: none
+
+.input
+  &-left
+    left: -4px
+  &-right
+    right: -31px
+
+.modal
+  &__overlay
+    display: none
+    &_visible
+      display: block
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: rgba(0, 0, 0, 0.3)
+  &_close
+    content: ''
+    position: absolute
+    top: 10vh
+    right: 15vw
+    width: 50px
+    height: 50px
+    border: none
+    border-radius: 50%
+    background-color: $main-color
+    background-image: url(../img/sections/equipment/delete-color-filter.svg)
+    background-size: 25px 25px
+    background-repeat: no-repeat
+    background-position: center

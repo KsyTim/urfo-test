@@ -1,3 +1,112 @@
+@media screen and (max-width: 1900px)
+  .equipment
+    &__filter
+      flex: 0 0 22vw
+    &__goods
+      flex: 0 0 55vw
+    &__items
+      &__item
+        justify-content: space-between
+
+@media screen and (max-width: 1550px)
+  .equipment
+    &__title
+      margin: 1px 0 15px 3px
+    &__info
+      display: none
+      &__total
+        &_mobile
+          &_hidden
+            display: block
+            margin-bottom: 30px
+      &_mobile
+        &_hidden
+          display: flex
+      &__total
+        display: flex
+        align-items: center
+      &__img
+        margin-right: 9px
+    &__filter
+      display: none
+      padding: 0
+      .filter
+        &__form
+          &-header,
+          &-part
+            padding: 20px 33px 0
+      &_hugescreen
+        &_visible
+          .filter
+            &__form
+              &-header
+                margin-bottom: 27px
+    &__goods
+      flex: 0 0 100%
+
+  a.filter
+    &__form
+      &-reset
+        display: none
+
+  .filter
+    &__form
+      &__buttons
+        &_mobile
+          &_hidden
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 28px 33px 20px
+            background-color: $breadcrump-bg
+      &__button
+        background-color: transparent
+        +form-elem-reset
+      &__submit
+        &__button
+          background-color: $cart-bgc
+          color: $white-text
+          font-family: $font-medium
+          font-size: 18px
+          line-height: 23px
+          letter-spacing: 0.02em
+          margin-top: 5px
+          padding: 1rem 3rem
+          width: 17.62rem
+          min-height: 4.85rem
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          &::before
+            position: absolute
+            content: ''
+            top: 1.95rem
+            left: 3rem
+            width: 2.85rem
+            height: 0.9rem
+            background-image: url(../img/sections/equipment/form-arrows.svg)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 100% 100%
+
+  #equipment
+    &-sort
+      font-weight: 600
+    &-filter
+      font-size: 18px
+      line-height: 22px
+      letter-spacing: 0.02em
+      color: $header-link-text
+      font-family: $font-semibold
+    &-total
+      margin: -1px 7px 0 5px
+
+  .seo
+    &__text
+      .wrapper
+        max-width: 70vw
+
 @media screen and (max-width: 1440px)
   .main
     &-header
@@ -169,6 +278,7 @@
 
   .breadcrumbs
     display: none
+
 @media screen and ( max-width: 600px)
   .main
     &-header

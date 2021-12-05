@@ -120,9 +120,13 @@
   <section class="equipment">
     <div class="wrapper">
       <h2 class="equipment__item equipment__title">Отопительное оборудование</h2>
+      <div class="equipment__info__total equipment__info__total_mobile_hidden">
+        <span id="equipment-total">2395</span>
+        <span>товаров</span>
+      </div>
       <div class="equipment__item equipment__container">
         <div class="equipment__container__item equipment__filter">
-          <form action="">
+          <form action="#" method="post">
             <div class="filter__form-header">
               <h3 class="filter__form-title">Фильтры</h3>
               <a href="#" class="filter__form-reset">
@@ -134,7 +138,7 @@
               <a href="#type" class="filter__form-title filter__form-part__title">Отопительное оборудование</a>
               <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
                 <label for="warm" class="checkbox-label">
-                  <input id="warm" type="checkbox">
+                  <input id="warm" type="checkbox" checked>
                   <span>Радиаторы отопления</span>
                 </label>
                 <label for="convector" class="checkbox-label">
@@ -151,6 +155,164 @@
                 </label>
               </div>
             </div>
+            <div class="filter__form-part brand">
+              <a href="#type" class="filter__form-title filter__form-part__title">Бренд</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="prumo" class="checkbox-label">
+                  <input id="prumo" type="checkbox">
+                  <span>Prumo</span>
+                </label>
+                <label for="irsap" class="checkbox-label">
+                  <input id="irsap" type="checkbox">
+                  <span>Irsap</span>
+                </label>
+                <label for="terma" class="checkbox-label">
+                  <input id="terma" type="checkbox">
+                  <span>Terma</span>
+                </label>
+                <label for="laten" class="checkbox-label">
+                  <input id="laten" type="checkbox">
+                  <span>Laten</span>
+                </label>
+                <label for="guardo" class="checkbox-label">
+                  <input id="guardo" type="checkbox">
+                  <span>Guardo</span>
+                </label>
+              </div>
+            </div>
+            <!-- Цена -->
+            <div class="filter__form-part price">
+              <a href="#price" class="filter__form-title filter__form-part__title">Цена</a>
+              <div id="price" class="filter__form-part__content filter__form-part__content_hidden middle">
+                <div class="multi-range-slider">
+                  <input type="range" id="input-left" min="3000" max="35000" step="1000" value="3000">
+                  <input type="range" id="input-right" min="3000" max="35000" step="1000" value="23000">
+                  <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left">
+                      <span class="input-left"></span>
+                    </div>
+                    <div class="thumb right">
+                      <span class="input-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div class="filter__form-part">
+              <a href="#type" class="filter__form-title filter__form-part__title">Количество секций</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="section-04" class="checkbox-label">
+                  <input id="section-04" type="checkbox">
+                  <span>4</span>
+                </label>
+                <label for="section-06" class="checkbox-label">
+                  <input id="section-06" type="checkbox">
+                  <span>6</span>
+                </label>
+                <label for="section-08" class="checkbox-label">
+                  <input id="section-08" type="checkbox">
+                  <span>8</span>
+                </label>
+                <label for="section-12" class="checkbox-label">
+                  <input id="section-12" type="checkbox">
+                  <span>12</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__form-part distance">
+              <a href="#type" class="filter__form-title filter__form-part__title">Межосетевое расстояние</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="distance-20" class="checkbox-label">
+                  <input id="distance-20" type="checkbox">
+                  <span>20 см</span>
+                </label>
+                <label for="distance-35" class="checkbox-label">
+                  <input id="distance-35" type="checkbox">
+                  <span>35 см</span>
+                </label>
+                <label for="distance-50" class="checkbox-label">
+                  <input id="distance-50" type="checkbox">
+                  <span>50 см</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__form-part square">
+              <a href="#type" class="filter__form-title filter__form-part__title">Площадь отопления</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="square-19" class="checkbox-label">
+                  <input id="square-19" type="checkbox">
+                  <span>Более 19 м<sup>2</sup></span>
+                </label>
+                <label for="square-8" class="checkbox-label">
+                  <input id="square-8" type="checkbox">
+                  <span>Менее 8 м<sup>2</sup></span>
+                </label>
+                <label for="square-14" class="checkbox-label">
+                  <input id="square-14" type="checkbox">
+                  <span>от 10 до 14 м<sup>2</sup></span>
+                </label>
+                <label for="square-26" class="checkbox-label">
+                  <input id="square-26" type="checkbox">
+                  <span>от 15 до 26 м<sup>2</sup></span>
+                </label>
+              </div>
+            </div>
+            <!-- Цвет радиокнопки -->
+            <div class="filter__form-part">
+              <a href="#type" class="filter__form-title filter__form-part__title">Цвет</a>
+              <div id="type" class="filter__form-part__content filter__form-part__content_hidden">
+                <label for="color-red" class="checkbox-label_color">
+                  <input id="color-red" type="checkbox" checked>
+                  <span class="color-red">Красный</span>
+                </label>
+                <label for="color-yellow" class="checkbox-label_color">
+                  <input id="color-yellow" type="checkbox">
+                  <span class="color-yellow">Желтый</span>
+                </label>
+                <label for="color-green" class="checkbox-label_color">
+                  <input id="color-green" type="checkbox">
+                  <span class="color-green">Зеленый</span>
+                </label>
+                <label for="color-blue" class="checkbox-label_color">
+                  <input id="color-blue" type="checkbox">
+                  <span class="color-blue">Синий</span>
+                </label>
+                <label for="color-violet" class="checkbox-label_color">
+                  <input id="color-violet" type="checkbox">
+                  <span class="color-violet">Фиолетовый</span>
+                </label>
+                <label for="color-pink" class="checkbox-label_color">
+                  <input id="color-pink" type="checkbox">
+                  <span class="color-pink">Розовый</span>
+                </label>
+                <label for="color-beige" class="checkbox-label_color">
+                  <input id="color-beige" type="checkbox">
+                  <span class="color-beige">Бежевый</span>
+                </label>
+                <label for="color-white" class="checkbox-label_color">
+                  <input id="color-white" type="checkbox">
+                  <span class="color-white">Белый</span>
+                </label>
+                <label for="color-black" class="checkbox-label_color">
+                  <input id="color-black" type="checkbox">
+                  <span class="color-black">Черный</span>
+                </label>
+                <label for="color-grey" class="checkbox-label_color">
+                  <input id="color-grey" type="checkbox">
+                  <span class="color-grey">Серый</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__form__buttons_mobile_hidden">
+              <button class="filter__form__button filter__form__submit__button">Подробнее</button>
+              <button class="filter__form__button filter__form-reset">
+                <span>Сбросить</span>
+                <img src="./img/sections/equipment/reset.svg" alt="Filter Form: Reset">
+              </button>
+            </div>
+            <!-- /.filter__form__buttons_mobile_hidden -->
           </form>
         </div>
         <div class="equipment__container__item equipment__goods">
@@ -162,6 +324,20 @@
             <div class="equipment__info__sort">
               <label for="equipment-sort">Цена:</label>
               <select name="sort" id="equipment-sort">
+                <option value="возрастание">По возрастанию</option>
+                <option value="убывание">По убыванию</option>
+                <option value="скидка">По скидке</option>
+              </select>
+            </div>
+          </div>
+          <div class="equipment__goods__item equipment__info equipment__info_mobile_hidden">
+            <div class="equipment__info__total">
+              <img src="./img/sections/equipment/filter.svg" alt="Equipment: Filters Icon" class="equipment__info__img">
+              <span id="equipment-filter">Фильтры</span>
+            </div>
+            <div class="equipment__info__sort">
+              <select name="sort" id="equipment-sort">
+                <option value="default" disabled selected>Сортировка</option>
                 <option value="возрастание">По возрастанию</option>
                 <option value="убывание">По убыванию</option>
                 <option value="скидка">По скидке</option>
@@ -193,11 +369,19 @@
               <div class="equipment__items__cost">
                 <div class="equipment__items__price">
                   <span>4 250<sup>₽</sup></span>
+                  <!-- старая цена -->
+                  <!-- <div class="equipment__items__price_old">
+                    <span>5 890<sup>₽</sup></span>
+                  </div> -->
                 </div>
                 <a class="equipment__items__cart">
                   <img src="./img/sections/equipment/cart.svg" alt="" class="equipment__items__cart-pic">
                 </a>
               </div>
+              <!-- Акция -->
+              <!-- <div class="equipment__items__sale">
+                <span class="equipment__items__sale-text">Акция</span>
+              </div> -->
             </div>
             <div class="equipment__items__item">
               <div class="equipment__items__content">
@@ -402,5 +586,42 @@
     <!-- /.wrapper -->
   </section>
   <!-- /.equipment -->
+  <section class="seo__text">
+    <div class="wrapper">
+      <h2 class="seo__text__title">Длинный или короткий заголовок SEO текста</h2>
+      <div class="seo__text__content-main">
+        <p class="seo__content-main__info">
+          Интернет-магазин автоматической водосберегающей сантехники и дизайн радиаторов отопления
+        </p>
+        <p class="seo__content-main__info">
+          Сантехническое и отопительное оборудование - основные продукты интернет-магазина "Экон Урфо".
+        </p>
+        <p class="seo__content-main__info">
+          На сайте urfoecon.ru, вы можете выбрать и купить автоматическую водосберегающую сантехнику и дизайн радиаторы отопления. На сайте urfoecon.ru, вы можете выбрать: смесители, душевые, смывные устройства для унитазов и писсуаров, а так же дополнительные товары: сушилки для рук, дозаторы мыла, фены для волос, держатели туалетной бумаги, ведра и другое.
+        </p>
+        <p class="seo__content-main__info">
+          Преимущества автоматической водосберегающей сантехники — экономия денег и воды! Результат будет заметен с первого месяца установки. Обратитесь к нашим специалистам и узнайте вашу выгоду при использовании автоматической водосберегающей сантехники. Звоните или оставляйте заявку на расчет.
+        </p>
+      </div>
+      <div class="seo__text__content-sub">
+        <h4 class="seo__content-sub__title">Подзаголовок внутри текста</h4>
+        <div class="seo__content-sub__info">
+          <p class="seo__content-sub__info-text">
+            На сайте urfoecon.ru, вы можете выбрать красивые современные модели радиаторов отопления Европейских и Российских производителей. Радиаторы представленные в каталоге,изготовлены из прочных материалов: сталь, алюминий и биметалл. Мы уверены в качестве нашей продукции и предоставляем гарантию до 25 лет на радиаторы отопления. В нашем ассортименте: водяные и электрические радиаторы, высокие, средние и низкие, узкие и широкие, трубчатые и панельные модели, стандартные белые, черные, бежевые и любые цвета по шкале RAL.
+          </p>
+          <p class="seo__content-sub__info-text">
+            Обратитесь к нашим специалистам и подберите радиаторы, которые гармонично впишутся в ваш интерьер и будут эффективно обогревать ваш дом. Звоните или оставляйте заявку на расчет.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  <!-- /.seo__text -->
+  <div class="modal__overlay">
+    <div class="modal_close"></div>
+  </div>
+  <!-- /.modal__overlay -->
+  <script src="./js/main.js"></script>
 </body>
 </html>
