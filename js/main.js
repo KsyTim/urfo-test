@@ -141,7 +141,24 @@ document.addEventListener('click', (event) => {
     filterElem.style.display = 'none';
     filterElem.classList.remove('equipment__filter_hugescreen_visible');
     document.querySelector('body').style.overflow = 'unset';
-  } 
+  } else if (target.matches('.main-header__btn__item')) {
+    if (document.documentElement.offsetWidth <= 768) {
+      document.querySelector('.modal__menu_mobile').style.display = 'block';
+      document.querySelector('body').style.overflow = 'hidden';
+    }
+  } else if (target.closest('a') && target.closest('a').matches('.modal__menu_close')) {
+    document.querySelector('.modal__menu_mobile').style.display = 'none';
+    document.querySelector('body').style.overflow = 'unset';
+  } else if (target.matches('#search-form-input') || target.closest('button') && target.closest('button').matches('.main-header__search-icon')) {
+    if (document.documentElement.offsetWidth <= 768) {
+      document.querySelector('.modal__search_mobile').style.display = 'block';
+      document.querySelector('body').style.overflow = 'hidden';
+    }
+  } else if (target.closest('a') && target.closest('a').matches('.modal__search_close')) {
+    document.querySelector('.modal__search_mobile').style.display = 'none';
+    document.querySelector('body').style.overflow = 'unset';
+  }
+  // console.log(target);
 })
 
 // window.addEventListener('resize', hideGoods);

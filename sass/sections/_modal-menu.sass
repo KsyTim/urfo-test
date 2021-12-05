@@ -1,0 +1,61 @@
+.modal
+  &__menu
+    &_mobile
+      display: none
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: $white-text
+      padding: 13px 21px
+      overflow-y: scroll
+    &__head
+      +flex-elem
+      margin: 0 0 59px
+      // position: sticky
+      // top: -20px
+      // z-index: 3
+      // background-color: $white-text
+      // padding: 25px 0
+      .main
+        &-header
+          &__logo
+            &-container
+              margin: 0
+    &__header
+      +flex-elem
+      justify-content: flex-start
+      img
+        margin-right: 17px
+    &__navigation
+      &-title
+        margin: 0
+        width: 100%
+        padding: 23px 0
+    &__item
+      &:last-child
+        margin-top: 43px
+        li
+          margin-bottom: 30px
+      &_hidden
+        .modal
+          &__menu
+            &__navigation
+              &-title
+                &::before
+                  display: none
+            &__header
+              border-top: 1px solid rgba(0, 0, 0, 0.13)
+              border-bottom: 1px solid rgba(0, 0, 0, 0.13)
+    &__subcontainer
+      padding: 0
+      margin: 0
+      list-style: none
+      margin-top: 7px
+      li
+        margin-bottom: 25px
+        &:last-child
+          margin-bottom: 43px
+      &_hidden
+        display: none

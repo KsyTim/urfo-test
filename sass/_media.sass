@@ -412,6 +412,30 @@
           &::before
             left: -22px
             top: 1px
+  .modal
+    &__menu
+      &__navigation
+        &-title
+          font-size: 16px
+          line-height: 20px
+          font-weight: 600
+          &::before
+            top: 46% !important
+      &__item
+        &_hidden
+          .modal
+            &__menu
+              &__navigation
+                &-title
+                  font-weight: 400
+      &__subcontainer
+        font-size: 14px
+        line-height: 18px
+      &__head
+        padding: 5px 0
+        margin: 0 0 35px -3px
+      &_close
+        margin: -15px 3px 0 0
 
 @media screen and (max-width: 480px)
   .main

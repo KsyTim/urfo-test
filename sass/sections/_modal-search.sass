@@ -1,0 +1,51 @@
+.modal
+  &__search
+    &_mobile
+      display: none
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: $white-text
+      padding: 13px 21px
+      overflow-y: scroll
+    &__head
+      +flex-elem
+      margin: 5px 0 82px -3px
+      .main
+        &-header
+          &__logo
+            &-container
+              margin: 0
+    &__header
+      +flex-elem
+      justify-content: flex-start
+      img
+        margin-right: 17px
+    &__form
+      display: flex
+      width: 100% !important
+      position: relative
+      button
+        position: absolute
+        width: 17px
+        height: 17px
+        top: 13px
+        background-color: transparent
+        +form-elem-reset
+        &.modal
+          &__search
+            &__btn
+              left: -2px
+            &__arrow
+              right: 5px
+    &_close
+      margin: -13px 2px 0 0
+
+#search-input-modal
+  +form-elem-reset
+  padding: 13px 35px
+  width: 100%
+  background-color: transparent
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13)
