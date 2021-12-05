@@ -43,6 +43,12 @@
                 margin-bottom: 27px
     &__goods
       flex: 0 0 100%
+    &__items
+      &__pic
+        width: 16.55vw
+      &__item
+        &-02
+          width: 20vw
 
   a.filter
     &__form
@@ -185,6 +191,36 @@
       top: 10vh
       right: 6vw
 
+  .equipment
+    &__items
+      &__sale
+        width: 80px
+        min-height: 29px
+        padding: 5px
+        &-text
+          font-size: 13px
+          &::before
+            left: -22px
+            top: 1px
+      &__cart
+        width: 4rem
+        height: 4rem
+
+  .filter
+    &__form
+      &__submit
+        &__button
+          padding: 1rem
+          width: 13.62rem
+          &::before
+            left: 2rem
+
+  .seo
+    &__text
+      .wrapper
+        max-width: 85vw
+        text-align: justify
+
 @media screen and ( max-width: 900px)
   .banner
     &__title
@@ -199,6 +235,39 @@
       font-size: 17px
       &::before
         left: 1.5rem
+
+  .equipment
+    &__items
+      grid-gap: 20px
+      grid-template: repeat(2, min-content)/repeat(2, 1fr)
+      &__title
+        font-size: 13px
+        line-height: 20px
+      &__pic
+        width: 21.55vw
+      &__item
+        &-02
+          width: 25vw
+    &__info
+      margin-bottom: 20px
+    &__filter
+      &_hugescreen
+        &_visible
+          top: 25%
+          right: 30%
+          bottom: -15%
+          transform: translate(22%, -20%)
+
+  .modal
+    &_close
+      top: 3vh
+      right: 5vw
+
+  .seo
+    &__text
+      padding: 140px 0
+      &__title
+        text-align: center
 
 @media screen and (max-width: 768px)
   .wrapper
@@ -276,6 +345,28 @@
       right: 38.5vw
       width: 11rem
 
+  .equipment
+    padding: 67px 21px 120px
+    &__items
+      &__pic
+        width: 30vw
+      &__item
+        &-02
+          width: 36vw
+      &__sale
+        width: 110px
+        min-height: 36px
+        padding: 9px 16px
+        &-text
+          font-size: 15px
+          &::before
+            top: 3px
+            left: -28px
+    &__title
+      font-size: 38px
+      line-height: 46px
+
+  .seo__text,
   .breadcrumbs
     display: none
 
@@ -291,6 +382,36 @@
       margin-top: 1rem
     &__image
       right: 35.5vw
+
+  .equipment
+    &__title
+      font-size: 30px
+      line-height: 36px
+    &__container
+      flex-direction: column
+      justify-content: unset
+    &__items
+      &__content
+        padding: 0 15px 0 20px
+      &__price
+        padding: 0 0 0 21px
+        font-size: 16px
+        line-height: 20px
+        &_old
+          font-size: 12px
+          line-height: 14px
+      &__cart
+        width: 3rem
+        height: 3rem
+      &__sale
+        width: 80px
+        min-height: 29px
+        padding: 5px
+        &-text
+          font-size: 13px
+          &::before
+            left: -22px
+            top: 1px
 
 @media screen and (max-width: 480px)
   .main
@@ -336,6 +457,224 @@
       top: 48.7vh
       right: 28.5vw
 
+  .equipment
+    padding: 67px 15px 120px 21px
+    &__title
+      font-size: 25px
+      line-height: 35px
+      margin: 1px 0 15px 0
+    &__items
+      grid-gap: 15px
+      &__item
+        &:nth-child(odd)
+          .equipment
+            &__items
+              &__title
+                margin-top: 14px
+      &__pic
+        width: 29vw
+        margin: 0 0 0 5px
+      &__item
+        // &:nth-child(n+7)
+        //   display: none
+        &-02
+          width: 36vw
+          margin: 7px 0 0 -4px
+        &-02+.equipment
+          &__items
+            &__title
+              margin: 2px 0 13px 3px
+        &:nth-child(n+3)
+          &.item
+            &_02,
+            &_03
+              display: none
+      &__title
+        font-size: 14px
+        line-height: 19px
+        margin: 13px 0 19px 5px
+      &__content
+        padding: 0 15px 0 12px
+      &__price
+        padding: 0 0 0 17px
+        margin-top: -10px
+        &_old
+          margin: -1px 0 0 26px
+          &::before
+            top: 6px
+            right: -1px
+            width: 3rem
+      &__sale
+        width: 90px
+        max-width: 45%
+        &-text
+          font-size: 12px
+          margin: 1px -17px 0 0
+          &::before
+            left: -24px
+            top: 3px
+      &__cart
+        width: 2.6rem
+        height: 2.6rem
+    &__goods
+      margin-right: 5px
+      &__more
+        display: flex
+        &_show
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 15px
+          line-height: 28px
+          color: $header-link-text
+          padding-top: 45px
+          position: relative
+          margin: 1px auto 0
+          &::before
+            position: absolute
+            content: ''
+            bottom: 2px
+            right: 0
+            left: 0
+            height: 2px
+            width: 100%
+            background-color: $header-link-text
+    &__filter
+      .checkbox
+        &-label
+          margin-bottom: 17px
+          span
+            font-size: 18px
+            line-height: 23px
+            &::before
+              width: 25px
+              height: 25px
+              margin-right: 25px
+      .filter
+        &__form
+          &-header
+            padding: 38px 25px 0
+            margin-bottom: 24px
+          &-title
+            font-size: 25px
+            line-height: 28px
+          &-part
+            padding: 0 20px
+            margin-bottom: 42px
+            &.amount
+              margin-bottom: 39px
+              .checkbox
+                &-label
+                  margin-bottom: 19px
+            &.color
+              margin-bottom: 20px
+              .filter
+                &__form
+                  &-part
+                    &__content
+                      margin-left: 8px
+              .checkbox
+                &-label
+                  &_color
+                    margin-bottom: 26px
+                    span
+                      font-size: 19px
+                      line-height: 21px
+                      &::before
+                        margin-right: 30px
+                      &::after
+                        margin: 5px 0 0 24px
+                        width: 12px
+                        height: 12px
+                    input[type="checkbox"]:checked+span::before
+                      margin: 2px 27px 0 -2px
+                    input[type="checkbox"]:checked+span::after
+                      background-size: 12px 12px
+            &__title
+              font-size: 20px
+              margin-bottom: 35px
+            &.brand
+              .checkbox
+                &-label
+                  margin-bottom: 19px
+            &.price
+              margin-bottom: 7.3rem
+              .filter
+                &__form
+                  &-part
+                    &__title
+                      margin-bottom: 34px
+          &__submit
+            &__button
+              font-size: 16px
+              line-height: 20px
+              width: 12.65rem
+              min-height: 2.85rem
+              padding: 1rem 2.6rem
+              &::before
+                left: 1.5rem
+                top: 1.3rem
+                width: 2rem
+                height: 1rem
+      &_hugescreen
+        &_visible
+          top: 0
+          right: 0
+          bottom: 0
+          left: -5px
+          transform: none
+    &__info
+      padding: 32px 14px
+      margin-bottom: 38px
+
+  #equipment
+    &-filter,
+    &-sort
+      font-size: 16px
+      line-height: 20px
+      letter-spacing: 0.02em
+    &-sort
+      background: transparent url(../img/sections/equipment/arrow.svg) no-repeat 85% 60%
+      padding: 0px 8px 0 0
+      margin-right: -11px
+    &-total
+      margin: -1px 7px 0 2px
+
+  .slider
+    .thumb
+      span
+        width: 5rem
+        font-size: 18px
+        line-height: 22px
+        bottom: -42px
+
+  .input
+    &-left
+      left: -2px
+    &-right
+      right: -37px
+
+  .filter
+    &__form
+      &__buttons
+        &_mobile
+          &_hidden
+            padding: 20px
+      &-reset
+        justify-content: unset
+        width: 8.35rem
+        img
+          margin: 10px 0 0 15px
+
+@media screen and (max-width: 400px)
+  .equipment
+    padding: 67px 0 120px
+    &__info
+      &__total
+        justify-content: center
+    &__goods
+      margin-right: 0
+
 @media screen and ( max-width: 375px)
   .banner
     &__button
@@ -343,3 +682,19 @@
     &__image
       top: 50vh
       right: 22.5vw
+
+  .equipment
+    &__title
+      font-size: 20px
+      line-height: 26px
+    &__items
+      &__title
+        font-size: 12px
+        line-height: 16px
+        margin: 13px 0 15px 0
+      &__price
+        font-size: 16px
+        line-height: 20px
+        padding: 0 0 0 10px
+        &_old
+          margin: -1px 0 0 12px
