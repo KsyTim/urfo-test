@@ -1,0 +1,95 @@
+.footer
+  font-size: 16px
+  line-height: 20px
+  color: #7E838C
+  &__main
+    padding: 52px 0 45px
+    display: grid
+    grid-gap: 35px
+    grid-template: repeat(1, min-content)/repeat(4, 1fr)
+    &__container
+      margin: 0
+      padding: 0
+      list-style: none
+      li
+        margin-bottom: 13px
+    &__item
+      +flex-elem
+      justify-content: unset
+      flex-direction: column
+      align-items: flex-start
+      width: 21.5vw
+      padding: 5px
+      &:first-child
+        padding: 0
+        width: 23vw
+      span,
+      .footer
+        &__item
+          &__title
+            font-size: 18px
+            line-height: 23px
+            color: #2B2E34
+            font-weight: 600
+            margin-bottom: 32px
+      .pic
+        margin-right: 13px
+      &.contacts
+        .footer
+          &__logo
+            margin-bottom: 54px
+            img
+              margin: 0 23px 0 0
+            span
+              margin-top: 11px
+          &__phone
+            &__item
+              margin-bottom: 45px
+              .time
+                display: flex
+                flex-direction: column
+                margin-top: 20px
+                div
+                  margin-bottom: 8px
+                span
+                  margin-left: 7px
+          &__email
+            &__item
+              margin-bottom: 56px
+          &__socials
+            display: flex
+            flex-direction: column
+            &__title
+              margin-bottom: 21px
+            &__links
+              margin-top: -3px
+            &__link
+              margin-right: -17px
+  &__sub
+    &__container
+      padding: 43px 0 33px
+      +flex-elem
+      // justify-content: unset
+      margin: 0
+      list-style: none
+      border-top: 1px solid #D9DAE1
+      .footer
+        &__main
+          &__item
+            display: flex
+            align-items: center
+            flex-direction: row
+            img
+              margin-left: 16px
+    &__item
+      margin-left: 2px
+      &.policy
+        margin-left: 5px
+      &.data
+        margin-left: -5px
+      &.dev
+        display: flex
+        align-items: center
+        margin-left: 5px
+        span
+          margin-right: 16px
