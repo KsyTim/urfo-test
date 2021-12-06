@@ -8,6 +8,15 @@
       &__item
         justify-content: space-between
 
+  .footer
+    &__main
+      &__item
+        width: 20vw
+        &:first-child
+          width: 20vw
+        &:last-child
+          width: 10vw
+
 @media screen and (max-width: 1550px)
   .equipment
     &__title
@@ -113,6 +122,12 @@
       .wrapper
         max-width: 70vw
 
+  .footer
+    &__main
+      &__item
+        &:last-child
+          width: 15vw
+
 @media screen and (max-width: 1440px)
   .main
     &-header
@@ -148,6 +163,29 @@
       top: 8vh
       left: unset
       right: 13vw
+
+  .footer
+    font-size: 14px
+    line-height: 16px
+    &__main
+      &__item
+        &.contacts
+          .footer
+            &__logo
+              .text
+                &-pic
+                  width: 12vw
+            &__socials
+              &__links
+                display: flex
+                flex-direction: column
+                .instagram
+                  margin-left: -15px
+    &__sub
+      &__item
+        &.dev
+          span
+            margin-right: 5px
 
 @media screen and ( max-width: 1200px)
   .wrapper
@@ -220,6 +258,49 @@
       .wrapper
         max-width: 85vw
         text-align: justify
+
+  .footer
+    &__sub
+      &__container
+        flex-direction: column
+        li
+          margin-bottom: 5px
+    .main
+      &-header
+        &__logo
+          &-text
+            span
+              display: block
+
+@media screen and ( max-width: 992px )
+  .footer
+    &__main
+      grid-template: repeat(2, min-content)/repeat(2, 1fr)
+      &__item
+        width: 40vw
+        padding-left: 15px
+        &:first-child
+          width: 40vw
+          padding-left: 15px
+        &:last-child
+          width: 40vw
+          padding-left: 15px
+        &.contacts
+          .footer
+            &__logo
+              .text
+                &-pic
+                  width: 15vw
+    &__sub
+      &__container
+        align-items: flex-start
+        padding-left: 15px
+      &__item
+        margin: 0
+        &.policy,
+        &.data,
+        &.dev
+          margin: 0
 
 @media screen and ( max-width: 900px)
   .banner
@@ -370,6 +451,22 @@
   .breadcrumbs
     display: none
 
+  .footer
+    padding: 0 30px
+    .main
+      &-header
+        &__logo
+          &-container
+            margin: 0 0 54px
+    &__main
+      &__item
+        &.contacts
+          .footer
+            &__logo
+              .text
+                &-pic
+                  width: 18vw
+
 @media screen and ( max-width: 600px)
   .main
     &-header
@@ -436,6 +533,33 @@
         margin: 0 0 35px -3px
       &_close
         margin: -15px 3px 0 0
+
+  .footer
+    &__main
+      grid-template: repeat(4, min-content)/repeat(1, 1fr)
+      &__item
+        width: 80vw
+        padding-left: 45px
+        &:first-child
+          width: 80vw
+          padding-left: 45px
+        &:last-child
+          width: 80vw
+          padding-left: 45px
+        &.contacts
+          .footer
+            &__logo
+              .text
+                &-pic
+                  width: 13rem
+    &__sub
+      &__container
+        padding-left: 45px
+    .main
+      &-header
+        &__logo
+          &-pic
+            width: 40px
 
 @media screen and (max-width: 480px)
   .main
@@ -520,7 +644,7 @@
       &__content
         padding: 0 15px 0 12px
       &__price
-        padding: 0 0 0 17px
+        padding: 0 0 0 15px
         margin-top: -10px
         &_old
           margin: -1px 0 0 26px
@@ -689,6 +813,85 @@
         width: 8.35rem
         img
           margin: 10px 0 0 15px
+
+  .footer
+    padding: 0 22px
+    font-size: 16px
+    line-height: 28px
+    &__main
+      padding: 48px 0 40px
+      grid-gap: 47px
+      &__item
+        padding-left: 0
+        margin-left: -2px
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-left: 0
+        &.contacts
+          .footer
+            &__logo
+              margin-bottom: 41px
+            &__phone
+              &__item
+                .time
+                  margin-top: -28px
+                  div
+                    margin-bottom: 0
+            &__email
+              &__item
+                margin: 1px 0 38px -3px
+                display: flex
+                align-items: center
+                .main
+                  margin-top: 3px
+            &__socials
+              margin-left: -4px
+              &__links
+                flex-direction: row
+                .instagram
+                  margin: -4px 0 0 1px
+          div.footer
+            &__phone
+              &__item
+                margin: 0 0 40px -1px
+        .footer
+          &__item
+            &__title
+              margin-bottom: 18px
+        &.categories
+          margin-bottom: -22px
+          &_02
+            margin-bottom: -24px
+            .footer
+              &__main
+                &__container
+                  margin-left: 4px
+      &__container
+        li
+          margin-bottom: 5px
+    &__phone
+      &__item
+        a
+          display: flex
+          align-items: center
+    .main
+      &-header
+        &__logo
+          &-text
+            margin: 8px 0 3px -3px
+    &__sub
+      &__container
+        padding: 56px 0 25px
+        margin-left: -2px
+        li
+          margin-bottom: 22px
+          &:last-child
+            margin-top: 33px
+      &__item
+        &.dev
+          span
+            margin-right: 18px
 
 @media screen and (max-width: 400px)
   .equipment

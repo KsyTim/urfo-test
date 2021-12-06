@@ -161,4 +161,4 @@ document.addEventListener('click', (event) => {
   // console.log(target);
 })
 
-// window.addEventListener('resize', hideGoods);
+window.addEventListener('resize', moreGoods);
